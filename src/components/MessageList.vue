@@ -1,7 +1,6 @@
 <template>
   <div class="message-list">
-    {{ message.title }}
-    <Message :message="message" />
+    <Message :message="message" v-on:button_event="addChat($event)"/>
   </div>
 </template>
 
@@ -14,6 +13,23 @@ export default {
   data() {
     return {};
   },
+  methods: {
+    addChat({ name, action }) {
+      this.$emit('button_event', { name, action });
+    }
+  },
   props: ['message']
 };
 </script>
+
+<style>
+.message-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.message-list .message.customer {
+  justify-content: flex-end;
+}
+</style>
+

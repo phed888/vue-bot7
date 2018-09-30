@@ -1,9 +1,9 @@
 <template>
-  <div class="message">
+  <div class="message" v-bind:class="{'customer': message.from == 'customer'}">
     <div class="message-time">{{ startTime() }}</div>
     <div class="brand-logo" v-if="message.brand"></div>
     <div v-for="(card, index) in message.cards" :key="index">
-      <Card :card="card" />
+      <Card :card="card" v-on:button_event="addChat($event)"/>
     </div>
   </div>
 </template>
@@ -21,6 +21,9 @@ export default {
     return {};
   },
   methods: {
+    addChat({ name, action }) {
+      this.$emit('button_event', { name, action });
+    },
     checkTime(i) {
       if (i < 10) {
         i = '0' + i;
@@ -57,6 +60,22 @@ export default {
   font-family: Arial, Helvetica, sans-serif;
   padding-left: 46px;
   position: relative;
+}
+.message > div {
+  display: flex;
+}
+.message.customer > div {
+  justify-content: flex-end;
+}
+.message.customer .card {
+  background-color: #0056ac;
+  align-content: flex-end;
+}
+.message.customer .card .card-text {
+  color: #ffffff;
+}
+.message.customer .message-time {
+  text-align: right;
 }
 .message-time {
   font-size: 11px;

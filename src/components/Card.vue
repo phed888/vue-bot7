@@ -4,7 +4,7 @@
       {{ card.text }}
     </div>
     <div class="button-list">
-      <Button :button="button" v-for="(button, index) in card.buttons" :key="index"/>
+      <Button :button="button" v-for="(button, index) in card.buttons" :key="index" v-on:button_event="addChat($event)"/>
     </div>
   </div>
 </template>
@@ -17,6 +17,14 @@ export default {
   props: ['card'],
   components: {
     Button
+  },
+  data() {
+    return {};
+  },
+  methods: {
+    addChat({ name, action }) {
+      this.$emit('button_event', { name, action });
+    }
   }
 };
 </script>
