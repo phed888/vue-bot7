@@ -8,33 +8,17 @@
 
 <script>
 // @ is an alias to /srcn
-import message_list from '@/data/msg';
-import Message from '@/components/Message';
+import message_list from "@/data/msg";
+import Message from "@/components/Message";
 
 export default {
-  name: 'home',
+  name: "home",
   data() {
     return {
       groups: message_list,
       chat: {
         messages: []
-      },
-      customer_msg: [
-        {
-          attached: false,
-          from: 'customer',
-          brand: '',
-          visibility: true,
-          cards: [
-            {
-              image: false,
-              text:
-                'Hi, I’m the Expedia bot. I can help you cancel or reconfirm your upcoming booking.',
-              buttons: []
-            }
-          ]
-        }
-      ]
+      }
     };
   },
   components: {
@@ -52,16 +36,15 @@ export default {
     addCustomerChat(name) {
       const self = this;
       var custResp = {
-        attached: false,
-        from: 'customer',
-        brand: '',
-        visibility: true,
-        cards: [
-          {
-            image: false,
-            text: name,
-            buttons: []
-          }
+        from: "customer",
+        cardGroups: [
+          [
+            {
+              image: false,
+              text: name,
+              buttons: []
+            }
+          ]
         ]
       };
       self.chat.messages.push(custResp);
