@@ -3,7 +3,7 @@
     <div class="message-time">{{ startTime() }}</div>
     <div class="brand-logo" v-if="message.brand"></div>
     <div v-for="(cardGroup, index) in message.cardGroups" :key="index" class="cardGroup">
-      <div v-for="(card, index) in cardGroup" :key="index">
+      <div v-for="(card, index) in cardGroup" :key="index" class="cardContainer">
         <Card :card="card" v-on:button_event="addChat($event)"/>
       </div>
     </div>
@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import Card from "@/components/Card";
+import Card from '@/components/Card';
 
 export default {
-  name: "Message",
-  props: ["message"],
+  name: 'Message',
+  props: ['message'],
   components: {
     Card
   },
@@ -23,36 +23,45 @@ export default {
     return {};
   },
   methods: {
+    ///////////////////////////////////////////
+    // Time methods
+    //
+    // send button_event up to Message List
     addChat({ name, action }) {
-      this.$emit("button_event", { name, action });
+      this.$emit('button_event', { name, action });
     },
+    // add leading 0 for numbers less than 10
     checkTime(i) {
       if (i < 10) {
-        i = "0" + i;
+        i = '0' + i;
       }
       return i;
     },
+    // change from 24 hour to 12 hour notation
     checkPM(j) {
       if (j > 12) {
         j = j - 12;
       }
       return j;
     },
+    // translate current Date to current time
     startTime() {
-      var ampm = "";
+      var ampm = '';
       var today = new Date();
       var h = today.getHours();
       var m = today.getMinutes();
       if (h > 11) {
-        ampm = "PM";
+        ampm = 'PM';
       } else {
-        ampm = "AM";
+        ampm = 'AM';
       }
-      // add a zero in front of numbers<10
       h = this.checkPM(h);
       m = this.checkTime(m);
-      return h + ":" + m + " " + ampm;
+      return h + ':' + m + ' ' + ampm;
     }
+    //
+    // end of time methods
+    ///////////////////////////////////////////
   }
 };
 </script>
@@ -63,16 +72,14 @@ export default {
   padding-left: 46px;
   position: relative;
 }
-.message > div > div {
-  display: flex;
-}
 .message.customer > div {
   justify-content: flex-end;
 }
 .message.customer .card {
   background-color: #0056ac;
-  align-content: flex-end;
   margin-right: 0;
+  min-width: 0% !important;
+  width: auto;
 }
 .message.customer .card .card-text {
   color: #ffffff;
@@ -82,12 +89,12 @@ export default {
 }
 .message-time {
   font-size: 11px;
-  color: "#5b5b5b";
+  color: '#5b5b5b';
   padding: 4px 0;
 }
 .brand-logo {
   position: absolute;
-  background-image: url("../assets/logo-expedia.png");
+  background-image: url('../assets/logo-expedia.png');
   height: 32px;
   width: 32px;
   top: 18px;
@@ -97,9 +104,12 @@ export default {
   display: flex;
   flex-direction: row;
 }
-.cardGroup .card {
-  margin-right: 10px;
-  min-width: 269px;
+.cardContainer {
+  display: flex;
+  width: 100%;
+}
+.customer .cardGroup .cardContainer {
+  justify-content: flex-end;
 }
 </style>
 
