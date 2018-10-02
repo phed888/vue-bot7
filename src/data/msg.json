@@ -1,6 +1,7 @@
 {
   "messages": [
     {
+      "index": 0,
       "from": "bot",
       "brand": "Expedia",
       "cardGroups": [
@@ -18,15 +19,18 @@
             "buttons": [
               {
                 "name": "Upcoming booking",
-                "action": "1"
+                "action": "1",
+                "suggestion": ""
               },
               {
                 "name": "Past booking",
-                "action": "2"
+                "action": "",
+                "suggestion": "Please select 'Upcoming booking'"
               },
               {
                 "name": "Something else",
-                "action": "3"
+                "action": "",
+                "suggestion": "Please select 'Upcoming booking'"
               }
             ]
           }
@@ -34,6 +38,7 @@
       ]
     },
     {
+      "index": 1,
       "from": "bot",
       "brand": "Expedia",
       "cardGroups": [
@@ -45,8 +50,65 @@
           }
         ],
         [
-          { "image": false, "text": "I'm a card too!", "buttons": [] },
-          { "image": false, "text": "I'm another card!", "buttons": [] }
+          {
+            "image": "hotel-photo-png",
+            "text": "<b>Hotel Grande</b><br />12 Nov 2018 - 16 Nov 2018<br />1234 Grande St., Miami, FL",
+            "buttons": [
+              {
+                "name": "Select",
+                "action": "2"
+              }
+            ]
+          },
+          {
+            "image": "hotel-photo-png",
+            "text": "<b>Hotel Grande</b><br />12 Nov 2018 - 16 Nov 2018<br />1234 Grande St., Miami, FL",
+            "buttons": [
+              {
+                "name": "Select",
+                "action": ""
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "index": 2,
+      "from": "bot",
+      "brand": "Expedia",
+      "cardGroups": [
+        [
+          {
+            "image": false,
+            "text": "Here's how I can help:",
+            "buttons": [
+              {
+                "name": "Change",
+                "action": ""
+              },
+              {
+                "name": "Cancel",
+                "action": ""
+              },
+              {
+                "name": "View amenities",
+                "action": ""
+              },
+              {
+                "name": "Email confirmation",
+                "action": ""
+              },
+              {
+                "name": "View details",
+                "action": ""
+              },
+              {
+                "name": "Message agent",
+                "action": ""
+              }
+            ]
+          }
         ]
       ]
     }
