@@ -1,7 +1,9 @@
 <template>
   <div class="container">
     <div v-for="(group, index) in chat" :key="index" class="message-list">
-      <Message v-for="(message, index) in group" :key="index" :message="message" v-on:button_event="addChat($event)"/>
+      <transition-group name="slide-fade">
+        <Message v-for="(message, index) in group" :key="index" :message="message" v-on:button_event="addChat($event)" class="slide-fade-item"/>
+      </transition-group>
     </div>
   </div>
 </template>
@@ -77,6 +79,33 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   padding: 0 6px 20px;
+}
+.slide-fade-enter-active {
+  /* transition: all 0.3s ease; */
+  animation: slide-in 0.3s ease;
+}
+.slide-fade-leave-active {
+  /* transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1); */
+  animation: slide-in 0.3s ease reverse;
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: scaleY(0);
+  opacity: 0;
+}
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  50% {
+    opacity: 0;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
 }
 </style>
 
