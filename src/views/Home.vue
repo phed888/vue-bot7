@@ -7,12 +7,12 @@
 </template>
 
 <script>
-// @ is an alias to /srcn
-import message_list from "@/data/msg";
-import Message from "@/components/Message";
+// @ is an alias to /src
+import message_list from '@/data/msg';
+import Message from '@/components/Message';
 
 export default {
-  name: "home",
+  name: 'home',
   data() {
     return {
       groups: message_list,
@@ -36,7 +36,7 @@ export default {
     addCustomerChat(name) {
       const self = this;
       var custResp = {
-        from: "customer",
+        from: 'customer',
         cardGroups: [
           [
             {
@@ -73,7 +73,7 @@ body {
   width: 375px;
 }
 .message-list {
-  height: 100vh;
+  height: 667px;
   overflow-y: auto;
   overflow-x: hidden;
   padding: 0 6px 20px;
