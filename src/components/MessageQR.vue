@@ -4,7 +4,7 @@
     <div class="brand-logo" v-if="message.brand"></div>
     <div v-for="(cardGroup, index) in message.cardGroups" :key="index" class="cardGroup">
       <ul v-for="(card, index) in cardGroup" :key="index" class="cardContainer" v-bind:class="{'carousel': card.length > 1}">
-          <Card :card="card" v-on:button_event="addChat($event)"/>
+          <CardQR :card="card" v-on:button_event="addChat($event)"/>
       </ul>
     </div>
   </div>
@@ -12,14 +12,14 @@
 
 <script>
 // import Card from '@/components/Card';
-import Card from '@/components/Card';
+import CardQR from '@/components/CardQR';
 
 export default {
   name: 'Message',
   props: ['message'],
   components: {
     // Card,
-    Card
+    CardQR
   },
   data() {
     return {};

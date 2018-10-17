@@ -12,12 +12,14 @@
 
 <script>
 import Button from '@/components/Button';
+import QuickReply from '@/components/QuickReply';
 
 export default {
   name: 'Card',
   props: ['card'],
   components: {
-    Button
+    Button,
+    QuickReply
   },
   data() {
     return {};
@@ -44,15 +46,17 @@ export default {
   min-width: 130px;
   max-width: 85%;
   margin-bottom: 4px;
+  position: relative;
 }
 .card.carousel {
   margin-right: 10px;
-  min-width: 240px;
+  overflow: hidden;
 }
 .card-image {
   background-size: cover;
   border-radius: 13px 13px 0 0;
   overflow: hidden;
+  width: 240px;
 }
 .card-text {
   color: #5b5b5b;

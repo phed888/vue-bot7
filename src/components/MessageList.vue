@@ -1,6 +1,7 @@
 <template>
   <div class="message-list">
     <Message :message="message" v-on:button_event="addChat($event)"/>
+    <div class="scroll-target"></div>
   </div>
 </template>
 
