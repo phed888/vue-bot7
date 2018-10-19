@@ -121,7 +121,6 @@ body {
 }
 .pop-in-enter,
 .pop-in-leave-to {
-  /* transform: translateY(10%); */
   opacity: 0;
 }
 </style>
