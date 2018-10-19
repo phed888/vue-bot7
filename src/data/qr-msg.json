@@ -18,6 +18,11 @@
             "text": "And if you ask me something I cannot yet help with, I’ll quickly connect you with a friendly customer service agent.",
             "buttons": [
               {
+                "name": "Shopping question",
+                "action": "",
+                "suggestion": ""
+              },
+              {
                 "name": "Upcoming booking",
                 "action": "1",
                 "suggestion": ""
