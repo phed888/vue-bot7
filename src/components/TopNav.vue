@@ -1,9 +1,9 @@
 <template>
   <div class="top-nav">
     <div class="button-group">
-      <router-link to="/" tag="button" class="top-nav-button">Quick Replies</router-link>
-      <router-link to="/card_buttons" tag="button" class="top-nav-button">Card Buttons</router-link>
-      <router-link to="/web_view" tag="button" class="top-nav-button">Web View</router-link>
+      <router-link to="/" tag="button" class="top-nav-button">B1</router-link>
+      <router-link to="/card_buttons" tag="button" class="top-nav-button">B2</router-link>
+      <router-link to="/web_view" tag="button" class="top-nav-button">B3</router-link>
     </div>
   </div>
 </template>
