@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <ChatHeader />
+    <ChatHeaderAnon />
     <ChatFooter />
     <div v-for="(group, index) in chat" :key="index" class="message-list">
       <div class="full-height"></div>
@@ -16,7 +16,7 @@
 // @ is an alias to /src
 import message_list from '@/data/qr-msg';
 import MessageQR from '@/components/MessageQR';
-import ChatHeader from '@/components/ChatHeader';
+import ChatHeaderAnon from '@/components/ChatHeaderAnon';
 import ChatFooter from '@/components/ChatFooter';
 
 export default {
@@ -31,7 +31,7 @@ export default {
   },
   components: {
     MessageQR,
-    ChatHeader,
+    ChatHeaderAnon,
     ChatFooter
   },
   methods: {

@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style>
-.top-nav {
+/* .top-nav {
   background-color: #333;
   width: 100%;
   padding: 8px 0;
@@ -40,7 +40,7 @@ export default {
   color: #eee;
   font-size: 14px;
   margin: 0 4px;
-}
+} */
 </style>
 
 

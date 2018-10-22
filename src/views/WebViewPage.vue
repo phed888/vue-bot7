@@ -3,7 +3,7 @@
     <transition name="pop-in">
       <WebView v-if="webViewVisible" v-on:close_webview="closeWebView()"/>
     </transition>
-    <ChatHeader />
+    <ChatHeaderAnon />
     <ChatFooter />
     <div v-for="(group, index) in chat" :key="index" class="message-list">
       <div class="full-height"></div>
@@ -17,7 +17,7 @@
 // @ is an alias to /src
 import message_list from '@/data/qr-msg';
 import MessageQR from '@/components/MessageQR';
-import ChatHeader from '@/components/ChatHeader';
+import ChatHeaderAnon from '@/components/ChatHeaderAnon';
 import ChatFooter from '@/components/ChatFooter';
 import WebView from '@/components/WebView';
 
@@ -34,7 +34,7 @@ export default {
   },
   components: {
     MessageQR,
-    ChatHeader,
+    ChatHeaderAnon,
     ChatFooter,
     WebView
   },

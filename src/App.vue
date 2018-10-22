@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <TopNav />
+    <!-- <TopNav /> -->
     <router-view/>
   </div>
 </template>
@@ -20,20 +20,25 @@ export default {
 body {
   background-color: #444;
   margin: 0;
-  padding: 50px 0 0;
+  padding: 58px 0 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 24px;
 }
 .container {
   display: flex;
+
   flex-direction: column-reverse;
   background-color: white;
   margin: 0 auto;
-  padding-top: 58px;
   width: 375px;
-  height: 590px;
+  height: 675px;
   position: relative;
 }
 .full-height {
-  height: 400px;
+  height: 100vh;
 }
 .message-list {
   overflow: auto;

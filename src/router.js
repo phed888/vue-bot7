@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import QuickReplies from './views/QuickReplies.vue';
 import WebView from './views/WebViewPage.vue';
+import TestIndex from './views/TestIndex.vue';
 
 Vue.use(Router);
 
@@ -9,6 +10,11 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'test_index',
+      component: TestIndex
+    },
+    {
+      path: '/quick_replies',
       name: 'quick_replies',
       component: QuickReplies
     },
