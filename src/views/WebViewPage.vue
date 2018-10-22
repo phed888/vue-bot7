@@ -92,7 +92,7 @@ export default {
 </script>
 
 <style>
-body {
+/* body {
   background-color: #444;
   margin: 0;
   padding: 50px 0 0;
@@ -114,7 +114,7 @@ body {
   overflow: auto;
   padding: 0 0 0 6px;
   margin-bottom: 77px;
-}
+} */
 .pop-in-enter-active,
 .pop-in-leave-active {
   transition: all 0.3s ease-in-out;
