@@ -17,7 +17,7 @@
           </ul>
           <section class="answer">
             <p class="back-link" v-on:click="hideAnswer()">Back</p>
-            <h2>{{ questName }}</h2>
+            <h2 class="questionName">{{ questName }}</h2>
             <p>{{ questAnswer }}</p>
           </section>
         </div>
@@ -127,6 +127,13 @@ export default {
 </script>
 
 <style>
+h2.questionName {
+  color: #222;
+  font-size: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #999;
+  margin-bottom: 0;
+}
 .webview-container {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 50;
