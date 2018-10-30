@@ -90,11 +90,11 @@
             "buttons": [
               {
                 "name": "Change hotel",
-                "action": "6"
+                "action": ""
               },
               {
                 "name": "Cancel hotel",
-                "action": "6"
+                "action": ""
               },
               {
                 "name": "View amenities",
@@ -102,15 +102,15 @@
               },
               {
                 "name": "Email confirmation",
-                "action": "6"
+                "action": ""
               },
               {
                 "name": "View details",
-                "action": "6"
+                "action": ""
               },
               {
                 "name": "Message agent",
-                "action": "6"
+                "action": ""
               }
             ]
           }
