@@ -110,7 +110,7 @@ export default {
 .cardGroup {
   display: flex;
   flex-direction: row;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .customer .cardGroup {
   flex-direction: row-reverse;
