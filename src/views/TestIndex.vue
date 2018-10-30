@@ -1,11 +1,6 @@
 <template>
   <div class="test-index">
     <div class="index-container">
-      <h2>Chat button types</h2>
-      <div class="index-intro">
-        There are 3 designs in this part of the test. Each of the buttons below will take you to one of the designs.
-        <p>To return to this page, click 'Back to Index' in the upper right of each design.</p>
-      </div>
       <div class="button-group">
       <router-link to="/quick_replies" tag="button" class="index-nav-button">Quick reply buttons</router-link>
       <router-link to="/card_buttons" tag="button" class="index-nav-button">Card buttons</router-link>
@@ -25,7 +20,7 @@ export default {
 </script>
 
 <style>
-h2 {
+h2.testTitle {
   color: #eee;
   font-size: 28px;
   padding-bottom: 20px;
