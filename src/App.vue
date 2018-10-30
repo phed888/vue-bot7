@@ -21,8 +21,7 @@ body {
   background-color: #444;
   margin: 0;
   padding: 58px 0 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 100;
   font-size: 14px;
   line-height: 24px;
