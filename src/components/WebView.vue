@@ -149,6 +149,8 @@ h2.questionName {
   font-size: 14px;
   margin: 5%;
   height: calc(675px - 10%);
+  border-radius: 14px;
+  overflow: hidden;
 }
 .webview-header {
   display: flex;
@@ -193,7 +195,7 @@ h2.questionName {
   line-height: 0;
   position: absolute;
   right: 8px;
-  top: -4px;
+  top: 6px;
 }
 .question li:hover {
   background-color: aliceblue;
