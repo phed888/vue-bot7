@@ -1,5 +1,5 @@
 <template>
-  <button class="qr-button" v-on:click="doAction(button.name, button.action); hideButtonList($event);">
+  <button class="qr-button" v-on:click="doAction(button.name, button.action, $event);">
       {{ button.name }}
     </button>
 </template>
@@ -12,14 +12,17 @@ export default {
     return {};
   },
   methods: {
-    doAction(name, action) {
-      this.$emit('button_event', { name, action });
-    },
     hideButtonList(event) {
       const self = this;
       const thisParent = event.target.parentElement;
       thisParent.classList.add('hidden');
       setTimeout(self.removeButtonList, 1000, thisParent);
+    },
+    doAction(name, action, $event) {
+      this.$emit('button_event', { name, action });
+      if (action !== '') {
+        this.hideButtonList($event);
+      }
     },
     removeButtonList(thisParent) {
       thisParent.classList.add('removed');

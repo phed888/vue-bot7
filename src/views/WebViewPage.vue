@@ -74,7 +74,9 @@ export default {
       if (name === 'View amenities') {
         this.webViewVisible = true;
       } else {
-        setTimeout(self.addCustomerChat, 500, name);
+        if (action !== '') {
+          setTimeout(self.addCustomerChat, 500, name);
+        }
         setTimeout(self.addMessage, 1000, self.groups.messages[action]);
       }
     },

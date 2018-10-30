@@ -67,8 +67,10 @@ export default {
     },
     addChat({ name, action }) {
       const self = this;
-      setTimeout(self.addCustomerChat, 500, name);
-      setTimeout(self.addMessage, 1000, self.groups.messages[action]);
+      if (action !== '') {
+        setTimeout(self.addCustomerChat, 500, name);
+        setTimeout(self.addMessage, 1000, self.groups.messages[action]);
+      }
     }
   },
   mounted() {

@@ -13,7 +13,9 @@ export default {
   },
   methods: {
     doAction(name, action) {
-      this.$emit('button_event', { name, action });
+      if (action) {
+        this.$emit('button_event', { name, action });
+      }
     }
   }
 };
