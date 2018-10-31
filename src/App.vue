@@ -22,7 +22,6 @@ body {
   margin: 0;
   padding: 58px 0 0;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: 100;
   font-size: 14px;
   line-height: 24px;
 }
