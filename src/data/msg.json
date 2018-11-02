@@ -125,7 +125,7 @@
         [
           {
             "image": false,
-            "text": "Choose an option below to see details about the Omni Austin Hotel at Southpark.",
+            "text": "Choose an option below to see details about the Hotel Grande in Miami, FL.",
             "buttons": [
               {
                 "name": "Check-in/out times",
@@ -307,7 +307,7 @@
         [
           {
             "image": false,
-            "text": "The Hotel Grande provides 24hr shuttle service to the Port au Prince airport.",
+            "text": "The Hotel Grande provides 24hr shuttle service to the Miami International airport.",
             "buttons": [
               {
                 "name": "Start over",
@@ -422,7 +422,7 @@
         [
           {
             "image": false,
-            "text": "Your room comes with free access to the hotel's 'Wacky Waffle Bar' from 6:00 AM - 11:00 AM every day.",
+            "text": "Your room comes with free access to the hotel's breakfast buffet from 6:00 AM - 11:00 AM every day.",
             "buttons": [
               {
                 "name": "Start over",
@@ -445,7 +445,7 @@
         [
           {
             "image": false,
-            "text": "You can definitely see out the windows of your room, so there is a view in that sense.",
+            "text": "Your room has an ocean view.",
             "buttons": [
               {
                 "name": "Start over",
@@ -574,7 +574,7 @@
         [
           {
             "image": false,
-            "text": "The Hotel Grande can be reached at P.O.Box 1234, Port au Prince, Haiti",
+            "text": "The Hotel Grande can be reached at P.O.Box 1234, Miami, FL.",
             "buttons": [
               {
                 "name": "Start over",
